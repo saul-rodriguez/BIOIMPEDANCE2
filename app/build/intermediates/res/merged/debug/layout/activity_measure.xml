@@ -1,0 +1,237 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".Measure" >
+
+    <TableLayout
+        android:id="@+id/tableLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true" >
+
+        <TextView
+            android:id="@+id/textViewStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Frequencies"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <CheckBox
+                android:id="@+id/checkBox2M"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2MHz" />
+
+            <CheckBox
+                android:id="@+id/checkBox1M"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1MHz" />
+
+            <CheckBox
+                android:id="@+id/checkBox500k"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="500kHz" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <CheckBox
+                android:id="@+id/checkBox250k"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="250kHz" />
+
+            <CheckBox
+                android:id="@+id/checkBox125k"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="125kHz" />
+
+            <CheckBox
+                android:id="@+id/checkBox62_5k"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="62.5kHz" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <CheckBox
+                android:id="@+id/checkBox31_2k"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="31.25k" />
+
+            <CheckBox
+                android:id="@+id/checkBox15_6k"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="15.62k" />
+
+            <CheckBox
+                android:id="@+id/checkBox7_8k"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="7.812k" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <CheckBox
+                android:id="@+id/checkBox3_9k"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3.90k" />
+
+            <CheckBox
+                android:id="@+id/checkBox1_9k"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1.95kHz" />
+
+            <CheckBox
+                android:id="@+id/checkBoxCal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Calibrate" />
+
+        </TableRow>
+    </TableLayout>
+
+    <TableLayout
+        android:id="@+id/tableLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tableLayout1"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/tableLayout1"
+        android:layout_marginTop="24dp" >
+
+        <TableRow
+            android:id="@+id/tableRow6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="13dp"
+                android:layout_marginTop="15dp"
+                android:text="# Measurements"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <EditText
+                android:id="@+id/editTextNumber"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="number" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <Button
+                android:id="@+id/buttonStart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onClickSTART"
+                android:text="START" />
+
+            <Button
+                android:id="@+id/buttonTest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onClickTest"
+                android:text="Test" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/textViewFrequency"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Frequency: 0" />
+
+            <TextView
+                android:id="@+id/textViewNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Meas. number: 0" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+        </TableRow>
+    </TableLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tableLayout2"
+        android:layout_alignRight="@+id/tableLayout2"
+        android:layout_below="@+id/tableLayout2"
+        android:layout_marginTop="21dp"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Measured:" />
+
+        <TextView
+            android:id="@+id/MeasImpedance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Impedance:"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Calibrated:" />
+
+        <TextView
+            android:id="@+id/CalibImpedance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"            
+            android:text="Impedance:"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "/home/saul/AndroidStudioProjects/BIOIMPEDANCE2/app/build/intermediates/res/merged/debug/menu/measure.xml",
+        "source": "/home/saul/AndroidStudioProjects/BIOIMPEDANCE2/app/src/main/res/menu/measure.xml"
+    },
+    {
+        "merged": "/home/saul/AndroidStudioProjects/BIOIMPEDANCE2/app/build/intermediates/res/merged/debug/menu/main.xml",
+        "source": "/home/saul/AndroidStudioProjects/BIOIMPEDANCE2/app/src/main/res/menu/main.xml"
+    },
+    {
+        "merged": "/home/saul/AndroidStudioProjects/BIOIMPEDANCE2/app/build/intermediates/res/merged/debug/menu/index.xml",
+        "source": "/home/saul/AndroidStudioProjects/BIOIMPEDANCE2/app/src/main/res/menu/index.xml"
+    }
+]
